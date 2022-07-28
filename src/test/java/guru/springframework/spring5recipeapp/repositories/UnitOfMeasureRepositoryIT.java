@@ -9,14 +9,13 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import guru.springframework.spring5recipeapp.domain.UnitOfMeasure;
 
 @Ignore
 @RunWith(SpringRunner.class)
-@DataJpaTest
+//@DataJpaTest
 public class UnitOfMeasureRepositoryIT {
 	
 	@Autowired
