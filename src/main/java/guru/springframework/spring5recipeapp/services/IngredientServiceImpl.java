@@ -76,7 +76,7 @@ public class IngredientServiceImpl implements IngredientService {
 						.orElseThrow(() -> new RuntimeException("UOM NOT FOUND")));//TODO
 			} else {
 				Ingredient ingredient = ingredientCommandToIngredient.convert(ingredientCommand);
-				ingredient.setRecipe(recipe);
+//				ingredient.setRecipe(recipe);
 				recipe.addIngredient(ingredient);
 			}
 			
@@ -94,7 +94,11 @@ public class IngredientServiceImpl implements IngredientService {
 						.findFirst();
 			}
 			
-			return ingredientToIngredientCommand.convert(savedIngredientOptional.get());
+			//enhance with id value
+			IngredientCommand ingredientCommandSaved = ingredientToIngredientCommand.convert(savedIngredientOptional.get());
+			ingredientCommandSaved.setRecipeId(recipe.getId());
+			
+			return ingredientCommandSaved;
 				
 		}
 		
@@ -121,7 +125,7 @@ public class IngredientServiceImpl implements IngredientService {
 				log.debug("Ingredient found");
 				log.debug("Removing ingredient with id: " + ingredientId);
 				Ingredient ingredientToDelete = ingredientOptional.get();
-				ingredientToDelete.setRecipe(null);
+//				ingredientToDelete.setRecipe(null);
 				recipe.getIngredients().remove(ingredientToDelete);
 				recipeRepository.save(recipe);
 			} else {

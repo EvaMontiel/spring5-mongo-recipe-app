@@ -1,24 +1,28 @@
 package guru.springframework.spring5recipeapp.domain;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
-import lombok.EqualsAndHashCode;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@EqualsAndHashCode(exclude = {"recipe"})
 public class Ingredient {
 
-	private String id;
+	@Id
+	private String id= UUID.randomUUID().toString();
 
 	private String description;
 	private BigDecimal amount;
 
+	@DBRef
 	private UnitOfMeasure uom;
 
-	private Recipe recipe;
+//	private Recipe recipe;
 
 	public Ingredient() {
 	}
