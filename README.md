@@ -1,7 +1,5 @@
 # Spring Boot Recipe Application
 
-[![CircleCI](https://circleci.com/gh/springframeworkguru/spring5-recipe-app.svg?style=svg)](https://circleci.com/gh/springframeworkguru/spring5-recipe-app)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/EvaMontiel/spring5-mongo-recipe-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/EvaMontiel/spring5-mongo-recipe-app/tree/main)
 
-This repository is for an example application built in my Spring Framework 5 - Beginner to Guru
-
-You can learn about my Spring Framework 5 Online course [here.](https://go.springframework.guru/spring-framework-5-online-course)
+This repository is for an example application built in from [Spring Framework 5 - Beginner to Guru Online course.](https://go.springframework.guru/spring-framework-5-online-course)
